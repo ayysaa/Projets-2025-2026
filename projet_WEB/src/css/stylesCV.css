@@ -1,0 +1,168 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    background-color: #f9fafb;
+    color: #1f2937;
+    line-height: 1.5;
+}
+
+.page-cv {
+    width: 100%;
+    max-width: 900px;
+    margin: 2rem auto;
+    background-color: #fff;
+    padding: 2.5rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.2rem;
+    letter-spacing: 0.5px;
+    width: 100%;
+}
+
+header h2 {
+    margin: 0.2rem 0 0;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #4b5563;
+}
+
+.bloc-contact {
+    text-align: right;
+    font-size: 0.95rem;
+    color: #4b5563;
+}
+
+.bloc-contact div {
+    margin-bottom: 0.3rem;
+}
+
+section {
+    margin-bottom: 1.8rem;
+}
+
+section h3 {
+    font-size: 1.2rem;
+    border-bottom: 2px solid #2563eb;
+    padding-bottom: 0.3rem;
+    margin-bottom: 1rem;
+}
+
+.grille-double {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.grille-double > * {
+    flex: 1;
+    min-width: 250px;
+}
+
+ul {
+    padding-left: 1.2rem;
+    margin: 0.4rem 0 0;
+}
+
+li {
+    margin-bottom: 0.4rem;
+}
+
+.bloc-experience {
+    margin-bottom: 1rem;
+}
+
+.intitule-poste {
+    font-weight: 600;
+}
+
+.contexte-date {
+    font-size: 0.9rem;
+    color: #4b5563;
+}
+
+.liste-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.liste-tags span {
+    background-color: #f3f4f6;
+    padding: 0.3rem 0.8rem;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    border: 1px solid #e5e7eb;
+}
+
+.description-profil {
+    font-size: 1rem;
+    color: #4b5563;
+}
+
+.boutons-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.bouton {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    font-size: 0.95rem;
+    font-family: inherit;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: opacity 0.2s;
+}
+
+.bouton:hover {
+    opacity: 0.8;
+}
+
+.bouton-retour {
+    background-color: transparent;
+    color: #4b5563;
+    border: 1px solid #4b5563;
+}
+
+.bouton-imprimer {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+}
+
+@media print {
+    body {
+        background: #fff;
+    }
+
+    .page-cv {
+        margin: 0;
+        box-shadow: none;
+        padding: 1.5rem;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    a {
+        color: black;
+        text-decoration: none;
+    }
+
+    .non-imprimable, .boutons-navigation {
+        display: none !important;
+    }
+}

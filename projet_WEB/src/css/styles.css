@@ -1,0 +1,1074 @@
+/* configs générales */
+
+* {
+    box-sizing: border-box;
+    /* Pour éviter que les éléments grossissent et débordent lorsque l'on ajoute du padding 
+    en incluant padding et bordure dans la taille de l’élément*/
+}
+
+:root {
+    --couleur-boite : rgb(127, 224, 30);
+    --couleur-generale : rgb(79, 143, 20);
+}
+
+html {
+    font-size: 16px;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+@font-face {
+font-family: 'MetropolitanoMedium';
+src: url("../font/Metropolitano-Medium.ttf");
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 6rem 0 0 0;
+    font-family: 'MetropolitanoMedium';
+    background-color: rgb(18, 18, 18);
+    overflow-x: hidden;
+}
+
+/* gestion du haut de page */
+
+header {
+    height: 6rem;
+    min-height: 6rem;
+    width: 100%;
+    background-color: black;
+    display: flex; 
+    position: fixed;
+    top: 0;
+    border-bottom: .1rem solid var(--couleur-generale);
+    box-shadow: 0 .19rem .19rem .13rem rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+nav {
+    margin: 0.625rem;
+}
+
+nav.logoNav {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex: 3 65%;
+    align-items: center;
+}
+
+.devise {
+    font-size: 1.5rem;
+    margin: 0 0 0 1.25rem;
+    color: white;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    text-align: center;
+    justify-content: center;
+	 margin: 0.2rem 0.1rem 0 0.1rem;
+}
+
+div.contact img {
+    height: 2.5rem;
+    width: auto;
+}
+
+div.contact a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+div.contact a:hover {
+    text-decoration: underline var(--couleur-generale);
+    color: var(--couleur-generale);
+}
+
+#mode-eco {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin: 1rem;
+}
+
+#mode-eco img {
+    order: 1;
+}
+
+nav.contactNav {
+    width: 100%;
+    height: auto;
+    display: flex; 
+    flex: 1 35%;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav > a {
+    flex-direction: row;
+    height: auto;
+    width: auto;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 3.75rem;
+    width: auto;
+    margin: 0.2rem 0.1rem 0 0.1rem;
+}
+
+.logo:not(:first-child):hover {
+    transform: rotate(5deg);
+}
+
+
+/* gestion de la marge de droite */
+
+.right-bar {
+    position: fixed;
+    right: .75em;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    z-index: 100;
+    width: 3.75rem;
+    text-align: center;
+}
+
+.right-bar img {
+    max-width: 100%;
+    width: 2.5rem;
+    height: auto;
+    display: block;
+    cursor: pointer;
+}
+
+.right-bar:hover {
+    color: rgb(15, 105, 209);
+}
+
+.right-bar:visited {
+    color: black;
+}
+
+.HautDePage{
+    color: white;
+    transition: all 0.3s;
+}
+
+.HautDePage:hover {
+    color: rgb(106, 188, 22);
+}
+
+/* gestion générale des pages */
+
+main.content-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2rem 1rem;
+    background-color: rgb(26, 26, 26);
+}
+
+.main {
+    background-color: white;
+    width: 95%;
+    max-width: 90%;
+    margin: 0 auto; 
+    padding: 3rem;
+    border: 0.125rem solid var(--couleur-generale);
+    box-shadow: 0 0 1.25rem rgba(106, 188, 22, 0.2);
+}
+
+.entete-page {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    border-bottom: 0.3rem solid var(--couleur-generale);
+    padding-bottom: 1.25rem;
+}
+
+.titre-centre {
+	text-align: center;
+}
+
+.grand-titre {
+    font-size: 3rem;
+    margin: 0;
+    font-weight: 900;
+}
+
+.step {
+    color: rgb(244, 250, 189);
+    text-shadow:
+        -1px -1px 0 black,
+         1px -1px 0 black,
+        -1px  1px 0 black,
+         1px  1px 0 black; 
+    font-style : italic;
+}
+
+.volt {
+    color: var(--couleur-generale);
+    font-style : italic;
+}
+
+.sous-titre {
+    font-size: 1.2rem;
+    margin-top: 0.625rem;
+    font-style : italic;
+}
+
+.titre-section {
+    color: var(--couleur-generale);
+    border-left: 0.3rem solid black;
+    padding-left: 1rem;
+    margin-top: 0;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.conteneur-flex {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 2.5rem;
+    margin-bottom: 3.125rem;
+    align-items: center;
+}
+
+.colonne-image, .colonne-texte {
+    flex: 1; 
+    min-width: 18.75rem; 
+    text-align: justify;
+    text-justify: inter-word; 
+}
+
+.colonne-image img {
+    width: 100%;
+    height: auto;
+    border: 0.2rem solid black;
+    box-shadow: 0.3rem 0.3rem 0 var(--couleur-generale);
+}
+
+.boite-info {
+    background-color: rgb(240, 240, 240);
+    padding: 1.25rem;
+    border-left: 0.3rem solid var(--couleur-generale);
+    margin: 1.5rem 0;
+    font-style: italic;
+    color: rgb(51, 51, 51);
+}
+
+.boite-tableau {
+    display: grid;
+    gap: 1.875rem;
+    margin-top: 2.5rem;
+    max-width: 100%;
+}
+
+.colonne-boite-2 {
+    grid-template-columns: 1fr 1fr;
+}
+
+.colonne-boite-3 {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.boite {
+    background: var(--couleur-boite);
+    padding: 1.875rem;
+    border-radius: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+.lien-simple {
+    color: black;
+    text-decoration: underline var(--couleur-generale);
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.lien-simple:hover {
+    color: var(--couleur-generale);
+}
+
+.bandeau {
+    background-color: var(--couleur-generale);
+    color: black;
+    padding: 2.5rem;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin: 3.125rem 0;
+    text-transform: uppercase;
+}
+
+.bouton {
+    background-color: black;
+    color: var(--couleur-generale);
+    border: 0.125rem solid var(--couleur-generale);
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    margin-top: 1.25rem;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.bouton:hover {
+    background-color: var(--couleur-generale);
+    color: black;
+    border-color: black;
+}
+
+.bouton-ligne {
+    display: none;
+}
+    
+.liste-carree {
+    list-style-type: square;
+    padding-left: 1.25rem;
+    line-height: 1.8;
+    font-size: 1.1rem;
+    color: rgb(51, 51, 51);
+}
+
+.liste-carree li::marker {
+    color: var(--couleur-generale);
+}
+
+.grille-logos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    justify-content: center;
+    background-color: rgb(249, 249, 249);
+    padding: 1.25rem;
+    border: 0.06rem solid #ddd;
+}
+
+.section-tableau {
+    margin-bottom: 3.125rem;
+    text-align: center;
+}
+
+.section-tableau p{
+    text-align: center; 
+    max-width: 800px; 
+    margin: 10px auto;
+}
+
+.image-tableau {
+    width: 100%;
+    border: 0.125rem solid black;
+    box-shadow: 0 0 0.6rem rgba(0,0,0,0.1);
+}
+
+.section-produits {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.produit-carte {
+    flex: 1;
+    border: 0.125rem solid #eee;
+    padding: 1.6rem 1.6rem 0rem 1.6rem;
+    min-width: 16rem;
+    background-color: rgb(252, 252, 252);
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.produit-carte:hover {
+    border-color: var(--couleur-generale);
+    transform: translateY(-0.3rem);
+}
+
+.produit-carte h3 {
+    color: black;
+    border-bottom: 0.125rem solid var(--couleur-generale);
+    padding-bottom: 1rem;
+    margin-top: 0;
+    text-transform: uppercase;
+}
+
+.prix {
+    font-size : 1.6rem;
+    font-weight : bold;
+    color : var(--couleur-generale);
+    text-align : center;
+}
+
+.bouton-vert {
+    background-color: var(--couleur-generale);
+    color: black;
+    border: 0.125rem solid black;
+    padding: 0.8rem 1.5rem;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: block; 
+    margin: 0 auto 1.5rem auto;
+    width: 15rem;
+}
+
+.bouton-vert:hover {
+    background-color: black;
+    color: var(--couleur-generale);
+    border-color: var(--couleur-generale);
+}
+
+.separation {
+    border: 0;
+    height: 0.125rem;
+    background: var(--couleur-generale);
+    margin: 3.125rem 0;
+    opacity: 0.5;
+}
+
+.source{
+    font-size: 0.8em;
+    color:rgb(85, 85, 85);
+}
+
+.asterisque {
+    font-size : 0.9rem;
+    font-style: italic;
+}
+
+/* gestion de la page contact */
+
+.faq {
+    margin-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.question {
+    font-weight: bold;
+    background-color: rgb(240, 240, 240);
+    font-size: 1.3em;
+    padding: 1rem;
+    margin: 1rem;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    border-left: 0.3rem solid var(--couleur-generale);
+}
+
+.active, .question:hover {
+  background-color: rgb(204, 204, 204);
+}
+
+.question:after {
+  content: "+";
+  font-size: 2rem;
+  color:  var(--couleur-generale);
+  float: right;
+  margin-left: 0.5rem;
+}
+
+.active:after {
+  content: "-";
+}
+
+.reponse {
+    display: none;
+    overflow: hidden;
+    margin: 1.2rem 2rem 2.5rem 2rem;
+    font-size: 1.2rem;
+    max-height: 0;
+    transition: max-height 0.3s ease-out;
+}
+
+.formulaire {
+    margin-top: 2.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.formulaire-titre {
+    padding: 0.625rem ;
+    margin-bottom: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    min-width: 16rem;
+    max-width: fit-content;
+}
+
+.formulaire-champs {
+    padding: 0.625rem ;
+    margin-left: 5rem;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(240, 240, 240);
+    border: 0.2rem solid black;
+    box-shadow: 0.3rem 0.3rem 0 var(--couleur-generale);
+    min-width: 16rem;
+    max-width: fit-content;
+}
+
+.formulaire label {
+    font-weight: bold;
+    margin-top: 1.25rem;
+    margin-left: 0.25rem;
+}
+
+.formulaire input, .formulaire textarea {
+    width: 100%;
+    padding: 0.625rem;
+    margin-bottom: 0.625rem;
+    border: 0.125rem solid rgb(252, 252, 252);
+    border-radius: 0.3125rem;
+    font-size: 1rem;
+}
+
+.formulaire input:focus, .formulaire textarea:focus {
+    border-color: var(--couleur-generale);
+    outline: none;
+}
+
+.formulaire input[type="checkbox"] {
+    width: auto;
+    margin-right: 0.625rem; 
+}
+
+.coordonnees {
+    border: 0.125rem solid rgb(238, 238, 238);
+    padding: 1.6rem;
+    margin: auto;
+    margin-top: 1.25rem;
+    min-width: 16rem;
+    max-width: fit-content;
+    background-color: rgb(252, 252, 252);
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.coordonnees:hover {
+    border-color: var(--couleur-generale);
+    transform: translateY(-0.3rem);
+    transition: transform 0.3s, border-color 0.3s;
+}
+.coordonnees h2 {
+    color: black;
+    border-bottom: 0.125rem solid var(--couleur-generale);
+    padding-bottom: 1rem;
+    margin-top: 0;
+    text-transform: uppercase;
+}
+
+select{
+    width: 100%;
+    padding: 0.625rem;
+    margin-bottom: 0.625rem;
+    border: 0.125rem solid rgb(204, 204, 204);
+    border-radius: 0.3125rem;
+    font-size: 1rem;
+}
+
+select:focus {
+    border-color: var(--couleur-generale);
+    outline: none;
+}
+
+/* gestion de la page equipe */
+
+.presentation-equipe {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+}
+
+.membre-carte {
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+    background-color: rgb(249, 249, 249);
+    border: 1px solid rgb(221, 221, 221);
+    text-align: center;
+    padding: 2rem 1rem;
+    transition: transform 0.3s ease;
+}
+
+.membre-carte:hover {
+    transform: translateY(-5px);
+    border-color: rgb(106, 188, 22);
+    box-shadow: 0 5px 15px rgba(106, 188, 22, 0.2);
+}
+
+.photo-rond {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 1rem auto;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid rgb(106, 188, 22);
+}
+
+.photo-rond img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Permet de forcer l'image à prendre toute la taille de photo-rond sans se déformer. */
+}
+
+.membre-carte h3 {
+    margin: 0.5rem 0;
+    text-transform: uppercase;
+}
+
+.role {
+    color: rgb(106, 188, 22);
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.desc {
+    font-size: 0.9rem;
+    color: rgb(85, 85, 85);
+    margin-bottom: 1.5rem;
+}
+
+.bouton-petit {
+    text-decoration: none;
+    color: black;
+    border: 1px solid black;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.bouton-petit:hover {
+    background-color: rgb(106, 188, 22);
+    border-color: rgb(106, 188, 22);
+}
+
+.banniere-recrutement {
+     border:none; 
+     text-align:center; 
+     padding:0;
+}
+
+.titre-section-cv {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.conteneur-cvs {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+}
+
+.feuille-cv {
+    background-color: white;
+    width: 100%;
+    max-width: 800px;
+    padding: 3rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-top: 5px solid rgb(106, 188, 22);
+    position: relative;
+}
+
+.entete-cv {
+    border-bottom: 2px solid white;
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.entete-cv h2 {
+    margin: 0;
+    color: rgb(18, 18, 18);
+    text-transform: uppercase;
+}
+
+.poste-vise {
+    font-weight: bold;
+    color: rgb(106, 188, 22);
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.corps-cv {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.section-cv h4 {
+    margin: 0 0 0.5rem 0;
+    color: rgb(51, 51, 51);
+    text-transform: uppercase;
+    border-left: 3px solid rgb(106, 188, 22);
+    padding-left: 0.5rem;
+}
+
+.section-cv ul {
+    margin: 0;
+    padding-left: 1.2rem;
+}
+
+/* chare graphique */
+
+#boite-palette {
+    background-color: white;
+    border: 2px solid #ddd;
+    text-align: center;
+}
+
+#boite-palette div{
+    height: 100px;
+    width: 100%;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border: .125rem solid black;
+}
+
+#demo-vert-clair {
+    background-color: rgb(127, 224, 30);
+    color: black;
+}
+
+#demo-vert-fonce {
+    background-color: rgb(79, 143, 20);
+    color: white;
+}
+
+#demo-noir {
+    background-color: rgb(18, 18, 18);
+    color: white;
+}
+
+/* gestion du bas de page */
+footer {
+    position: relative;
+    min-height: 10vh;
+    width: 100%;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    border-top: 0.2rem solid var(--couleur-generale);
+}
+
+footer #footer-left, footer #footer-right {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+footer #footer-right p {
+    font-size: 2rem;
+    color: var(--couleur-generale);
+    margin: 0;
+}
+
+footer #footer-left P{
+    margin: 2rem 0 0 0;
+    font-size: 0.8rem;
+}
+
+#footer-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+footer .auteurs {
+    margin: 0;
+    font-size: 1rem;
+    color: rgb(204, 204, 204);
+}
+
+#plan-site {
+    padding: 0.625rem 1rem;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s;
+    border: 0.125rem solid var(--couleur-generale);
+}
+
+#plan-site:hover {
+    background-color: var(--couleur-generale);
+    color: black;
+}
+
+#logoIUT {
+    height: 3.75rem;
+    width: auto;
+}
+
+#legal, #charte{
+    font-size: 1rem;
+    color: white;
+}
+
+#legal:hover, #charte:hover {
+    color: var(--couleur-generale);
+}
+
+/*pour les petits écran ou grande tablette*/
+@media (max-width: 850px) {
+	html {
+        font-size: 13px;
+    }
+}
+
+/* gestion du mode mobile */
+.burger {
+    display: none;
+    font-size: 2.5rem;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    order: 2;
+}
+
+.burger:focus-visible {
+    outline: 3px solid var(--couleur-generale);
+    outline-offset: 4px;
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 12px;
+    }
+
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 100;
+    }
+    
+    .conteneur-flex {
+        display: block
+	 }
+
+
+    nav.contactNav {
+        display: none;
+    }
+
+    .burger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 2rem;
+        height: 1.5rem;
+        cursor: pointer;
+        margin-right: 1rem;
+        margin-top: 2rem;
+    }
+
+    .burger span {
+        display: block;
+        height: 0.25rem;
+        background-color: white;
+        border-radius: 2px;
+    }
+
+    .main {
+        padding: 1.2rem;
+        max-width: 100%;
+    }
+
+    .colonne-boite-3, .colonne-boite-2 {
+        grid-template-columns: 1fr;
+    }
+
+    .devise {
+        display: none;
+    }
+
+    .colonne-image, .colonne-texte {
+     min-width: 10rem;
+     display: block;
+     width: 100%;
+     max-width: 100%;  
+    }
+
+    .boite {
+    margin: 1rem 1rem 1rem 1rem;
+    }
+
+    .right-bar {
+        right: 0.5rem;
+    }
+
+    .right-bar img {
+        width: 2.5rem;
+    }
+
+    #texte-fleche {
+        display: none;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+
+    #footer-center {
+        position: relative;
+        transform: none;
+        left: auto;
+        margin: 1rem 0 1rem 0;
+    }
+
+    #plan-site {
+        text-align: center;
+        font-size: 0.8rem;
+    }
+    
+    .formulaire {
+		  flex-direction: column;
+        gap: 2rem;
+	 }
+
+	 .formulaire-champs {
+	     margin-left: 0;
+	     width: 100%;
+	     max-width: 100%;
+	 }
+
+	 .formulaire-titre {
+    	 max-width: 100%;
+	 }
+
+	 .formulaire input, .formulaire textarea {
+    	 font-size: 1.2rem;
+	 }
+	 
+	 .coordonnees {
+    	 max-width: 100%;
+    	 width: 100%;
+	 }
+	 
+	 .question {
+    	 font-size: 1.4rem;
+	 }
+
+	 .reponse {
+	    font-size: 1.1rem;
+	    margin: 1rem;
+	 }
+
+}
+
+
+/* Pour que les bouton aux textes longs passent sur 2 lignes sur petits écrans */
+
+@media (max-width: 390px) {
+    .bouton {
+        /*font-size: 0.9rem;*/
+        display: inline-block;
+    	white-space: nowrap;
+    }
+    
+    .bouton-ligne {
+	 	display: flex;
+    	flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+}
+
+/* Pour les écrans encore plus petit*/
+
+@media (max-width: 272px) {
+    html {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 214px) {
+    html {
+        font-size: 9px;
+    }
+}
+
+
+/*gestion impression*/
+
+@media print {
+	    body {
+	        background-color: white;
+	        color: black;
+	    }
+	    
+	    header, footer, .entete-page, .presentation-equipe, .barre-laterale, .separation, .titre-section-cv p, .right-bar, .banniere-recrutement {
+	        display: none;
+	    }
+	
+	    .main {
+	        border: none;
+	        box-shadow: none;
+	        width: 100%;
+	        max-width: 100%;
+	        padding: 0;
+	        margin: 0;
+	    }
+	
+	    .conteneur-cvs {
+	        gap: 0;
+	        display: block;
+	    }
+	
+	    .feuille-cv {
+	        box-shadow: none;
+	        border: none;
+	        border-bottom: 0.06rem solid #ccc;
+	        page-break-inside: avoid;
+	        margin-bottom: 2cm;
+	        padding: 0;
+	    }
+}
+
+/* Accessibilité RGAA au clavier */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--couleur-generale);
+    outline-offset: 3px;
+}
