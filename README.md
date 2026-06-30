@@ -25,7 +25,8 @@ Le résultat est visible à travers les nombreuses captures d'écran intégrées
 - Projet PHP (fin d'année)
 (dossier : projet_PHP)
 Le projet PHP consiste à concevoir un site internet servant de bibliothèque de jeux vidéo.
-Le résultat est accessible via ce lien : https://dwarves.iut-fbleau.fr/~millerio/sae_r301_gr12/
+Le résultat est accessible via ce lien :
+https://dwarves.iut-fbleau.fr/~millerio/sae_r301_gr12/
 Le fichier "JOURNAL.md", situé dans le dossier "projet_php", recense l'évolution de notre site.
 
 Projet JAVA (fin d'année)
