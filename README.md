@@ -25,7 +25,8 @@ Le résultat est visible à travers les nombreuses captures d'écran intégrées
 - Projet PHP (fin d'année)
 (dossier : projet_PHP)
 Le projet PHP consiste à concevoir un site internet servant de bibliothèque de jeux vidéo.
-Le résultat est accessible via ce lien : https://dwarves.iut-fbleau.fr/~millerio/sae_r301_gr12/
+Le résultat est accessible via ce lien :
+https://dwarves.iut-fbleau.fr/~millerio/sae_r301_gr12/
 Le fichier "JOURNAL.md", situé dans le dossier "projet_php", recense l'évolution de notre site.
 
 Projet JAVA (fin d'année)
@@ -45,8 +46,13 @@ Le fichier "guinetd-millerio-26.pdf" est le seul rapport disponible ; il a été
 > Récapitulatif pour voir le résultat des projets :
 
 > C    : Installer la bibliothèque https://iut-fbleau.fr/sitebp/doc/doc_bib_graphique/index.php?p=1, puis lancer "main.c".
+
 > WEB  : Ouvrir "index.html" dans un navigateur.
+
 > BD   : Captures d'écran dans les rapports PDF.
+
 > PHP  : https://dwarves.iut-fbleau.fr/~millerio/sae_r301_gr12/
+
 > JAVA : Lancer "Display.java", situé dans <projet_JAVA/src/main>.
+
 > SCR  : Non accessible.
